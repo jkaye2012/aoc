@@ -3,6 +3,7 @@ package jk.aoc;
 import java.util.ArrayList;
 import java.util.List;
 
+import jk.aoc.util.InputUtil;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NonNull;

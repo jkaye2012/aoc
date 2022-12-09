@@ -7,6 +7,7 @@ import java.util.Stack;
 import java.util.function.Function;
 
 import jk.aoc.Five.Cargo.CargoBuilder;
+import jk.aoc.util.InputUtil;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NonNull;

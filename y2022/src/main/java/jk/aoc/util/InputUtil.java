@@ -1,4 +1,4 @@
-package jk.aoc;
+package jk.aoc.util;
 
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;

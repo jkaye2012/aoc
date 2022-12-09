@@ -8,6 +8,7 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 
+import jk.aoc.util.InputUtil;
 import lombok.NonNull;
 
 public class Six {

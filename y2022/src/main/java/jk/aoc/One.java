@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+import jk.aoc.util.InputUtil;
 import lombok.Getter;
 import lombok.NonNull;
 

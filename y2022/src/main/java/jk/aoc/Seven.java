@@ -8,6 +8,7 @@ import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+import jk.aoc.util.InputUtil;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NonNull;

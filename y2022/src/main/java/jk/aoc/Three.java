@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import jk.aoc.util.InputUtil;
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
 
