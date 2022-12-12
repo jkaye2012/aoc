@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 import lombok.Getter;
 import lombok.NonNull;
 
 @Getter
-public class Matrix<T> {
+public final class Matrix<T> {
     private int numRows;
     private int numCols;
     private List<T> items;
@@ -43,7 +44,7 @@ public class Matrix<T> {
         return getNumCols() * getNumRows();
     }
 
-    private int index(int row, int col) {
+    public int index(int row, int col) {
         return row * getNumCols() + col;
     }
 
@@ -56,6 +57,14 @@ public class Matrix<T> {
         }
 
         return items.get(index(row, col));
+    }
+
+    public T get(int index) {
+        if (index >= size()) {
+            throw new IllegalArgumentException("requested index out of bounds");
+        }
+
+        return items.get(index);
     }
 
     enum Direction {
@@ -175,5 +184,29 @@ public class Matrix<T> {
 
     public Stream<T> stream() {
         return getItems().stream();
+    }
+
+    public int find(@NonNull T target) {
+        return getItems().indexOf(target);
+    }
+
+    public List<Integer> findAll(@NonNull Predicate<T> pred) {
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < size(); i++) {
+            if (pred.test(get(i))) {
+                result.add(i);
+            }
+        }
+
+        return result;
+    }
+
+    public void print() {
+        for (int i = 0; i < size(); i++) {
+            if (i > 0 && i % getNumCols() == 0) {
+                System.out.println();
+            }
+            System.out.print(get(i));
+        }
     }
 }
