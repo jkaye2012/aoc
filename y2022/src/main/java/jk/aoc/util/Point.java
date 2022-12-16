@@ -3,10 +3,13 @@ package jk.aoc.util;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NonNull;
+import lombok.Setter;
 import lombok.ToString;
 
 @AllArgsConstructor
 @Getter
+@Setter
 @EqualsAndHashCode
 @ToString
 public final class Point {
@@ -23,6 +26,10 @@ public final class Point {
 
     public Point downRight() {
         return new Point(x + 1, y + 1);
+    }
+
+    public int manhattanDistance(@NonNull Point other) {
+        return Math.abs(getX() - other.getX()) + Math.abs(getY() - other.getY());
     }
 
 }
